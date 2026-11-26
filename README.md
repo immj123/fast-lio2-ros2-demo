@@ -9,7 +9,7 @@ FAST-LIO2 激光惯性里程计（LIO-SLAM），移植适配 ROS2 Humble。
 - 支持离线数据集回放，无实体雷达也可以复现建图效果
 
 ## 二、开发环境
-- 操作系统：Ubuntu 22.04 LTS
+- 操作系统：Ubuntu 22.04.5
 - ROS版本：ROS2 Humble Hawksbill
 - 依赖库：
   - PCL 1.12：点云滤波、配准、几何处理
@@ -17,6 +17,8 @@ FAST-LIO2 激光惯性里程计（LIO-SLAM），移植适配 ROS2 Humble。
   - ikd-Tree：增量式KD-Tree，地图动态增删，提升配准效率
   - OpenCV：图像辅助处理
   - evo：轨迹离线评估，计算APE、RPE误差并绘图
+  - RViz2：ROS2三维可视化工具，实时查看点云与里程计轨迹
+  - CloudCompare：点云后处理、去噪、ICP配准、测绘断面/等高线生成
 
 ## 三、算法原理简述
 FAST-LIO2 属于紧耦合激光惯性里程计，核心流程：
